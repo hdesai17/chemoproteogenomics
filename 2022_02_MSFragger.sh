@@ -1,7 +1,7 @@
 #!/bin/bash
-#HetaDesai 05/17/2022
-## This script is command line version of the FragPipe analysis
-
+## This script is command line version of the FragPipe 2-stage FDR analysis
+##Start in a folder containing all .raw files
+##NOTE: line 93 contains paths to IonQuant jar files
 
 echo "Create File lists"
 path=`pwd` 
@@ -14,13 +14,8 @@ sed -e 's/.raw/.pep.xml/g' temp.txt|sed 's/^/interact-/'> temp4.txt
 paste -d'\0' temp2.txt temp4.txt > temp9.txt
 awk '$1=$1' ORS=' ' temp9.txt > filelist_proteinprophet.txt
 sed -e 's/.raw/\/psm.tsv/g' temp3.txt|sed 's/^/--psm /' > temp4.txt
-#sed -e 's/.raw/.pepXML/g' temp.txt > temp5.txt ##added
-#paste -d'\0' temp2.txt temp5.txt > temp6.txt ##added
 
 pwd | xargs echo '--specdir' | tee -a temp4.txt
-
-#cat temp4.txt temp6.txt > temp8.txt ##added
-#awk '$1=$1' ORS=' ' temp8.txt > filelist_ionquant.txt ##added
 
 awk '$1=$1' ORS=' ' temp4.txt > filelist_ionquant.txt #fp18
 rm temp*.txt
@@ -92,10 +87,10 @@ cd ..
 $philosopher workspace --clean
 $philosopher workspace --init
 
-echo "Run Ion Quant" #need to provide psm file for peptide_label_quant output
+echo "Run Ion Quant" 
 if [ $ionquant = "TRUE" ]; then
 
-java -Xmx90G -Dlibs.bruker.dir=/home/user/Tools/FragPipe-18.0/fragpipe/tools/MSFragger-3.5/ext/bruker -Dlibs.thermo.dir=/home/user/Tools/FragPipe-18.0/fragpipe/tools/MSFragger-3.5/ext/thermo -cp /home/user/Tools/FragPipe-18.0/fragpipe/tools/jfreechart-1.5.3.jar:/home/user/Tools/FragPipe-18.0/fragpipe/tools/batmass-io-1.25.5.jar:/home/user/Tools/FragPipe-18.0/fragpipe/tools/IonQuant-1.8.0.jar ionquant.IonQuant --threads 40 --ionmobility 0 --minexps 1 --mbr 0 --maxlfq 0 --requantify 1 --mztol 10 --imtol 0.05 --rttol 0.4 --mbrmincorr 0 --mbrrttol 1 --mbrimtol 0.05 --mbrtoprun 10 --ionfdr 0.01 --proteinfdr 1 --peptidefdr 1 --normalization 0 --minisotopes 1 --minscans 1 --writeindex 0 --light $light --heavy $heavy --tp 3 --minfreq 0.5 --minions 1 --locprob 0.75 --uniqueness 0 --multidir . $(< filelist_ionquant.txt)
+java -Xmx90G -Dlibs.bruker.dir=/path/to/Tools/FragPipe-18.0/fragpipe/tools/MSFragger-3.5/ext/bruker -Dlibs.thermo.dir=/path/to/Tools/FragPipe-18.0/fragpipe/tools/MSFragger-3.5/ext/thermo -cp /path/to/Tools/FragPipe-18.0/fragpipe/tools/jfreechart-1.5.3.jar:/home/user/Tools/FragPipe-18.0/fragpipe/tools/batmass-io-1.25.5.jar:/path/to/Tools/FragPipe-18.0/fragpipe/tools/IonQuant-1.8.0.jar ionquant.IonQuant --threads 40 --ionmobility 0 --minexps 1 --mbr 0 --maxlfq 0 --requantify 1 --mztol 10 --imtol 0.05 --rttol 0.4 --mbrmincorr 0 --mbrrttol 1 --mbrimtol 0.05 --mbrtoprun 10 --ionfdr 0.01 --proteinfdr 1 --peptidefdr 1 --normalization 0 --minisotopes 1 --minscans 1 --writeindex 0 --light $light --heavy $heavy --tp 3 --minfreq 0.5 --minions 1 --locprob 0.75 --uniqueness 0 --multidir . $(< filelist_ionquant.txt)
 else echo "IonQunat OFF"
 fi
 echo "Done"
