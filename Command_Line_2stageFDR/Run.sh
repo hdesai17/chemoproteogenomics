@@ -1,6 +1,6 @@
 #!/bin/bash
 
-############################Before running#######################################
+############################Before running######################################
 #Change ionquant to TRUE if quant workflow line 27
 #Change H/L masses here 26-39
 #Change path to reference database line 42
@@ -9,7 +9,7 @@
 #Change file path to Pipeline.sh lines 49 & 82
 #Change file path to get_WT_scans.R 61
 #Start in directory containing raw files
-#################################################################################
+################################################################################
 
 echo "Set variables"
 path=`pwd` #directory with raw files
