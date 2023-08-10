@@ -1,4 +1,4 @@
-#Get WT scans 
+#Get WT scans to pipe to MSFragger search
 #Loops through psms files in 'outputs' folder and outputs list of scan numbers to file scans.txt
 getwd()
 fnames<-list.files()
