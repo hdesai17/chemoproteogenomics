@@ -1,5 +1,5 @@
 #!/bin/bash
-## This script is command line version of the FragPipe 2-stage FDR analysis
+##This script is command line version of the FragPipe 2-stage FDR analysis
 ##Start in a folder containing all .raw files
 ##NOTE: line 93 contains paths to IonQuant jar files
 
