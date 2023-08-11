@@ -1,5 +1,5 @@
 # Chemoproteogenomics
-## 1. Command Line 2-stage FDR pipeline 
+## 1. MSFragger command-line 2-stage FDR 
 
  Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation.
 
