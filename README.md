@@ -1,4 +1,8 @@
 # Chemoproteogenomics
+
+_Note: FragPipe GUI is compatible with 2-stage FDR (see bioRXiv X)_
+
+
 ## 1. MSFragger command-line 2-stage FDR 
 
  Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation.
