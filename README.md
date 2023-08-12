@@ -1,8 +1,8 @@
 # Chemoproteogenomics
 
-_FragPipe GUI is compatible with 2-stage FDR (see bioRXiv X)_
+_FragPipe GUI is compatible with 2-stage search (see bioRXiv X)_
 
-Recommended procesisng is using the GUI with search-compatible database
+This updated GUI is recommended over command-line scripts.
 
 
 
@@ -11,7 +11,7 @@ Recommended procesisng is using the GUI with search-compatible database
 
 
 
-## 2. MSFragger command-line 2-stage FDR 
+## 2. MSFragger command-line 2-stage search
 
  Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation.
 
