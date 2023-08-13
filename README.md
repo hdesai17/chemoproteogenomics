@@ -1,6 +1,7 @@
 # Chemoproteogenomics
 
-_FragPipe GUI is compatible with 2-stage search (see bioRXiv X)_
+_FragPipe GUI is compatible with 2-stage search 
+link paper
 
 This updated GUI is recommended over command-line scripts.
 
