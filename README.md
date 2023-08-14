@@ -4,7 +4,7 @@ _FragPipe GUI is compatible with 2-stage search
 
 link paper
 
-**This updated GUI is recommended over command-line scripts.**
+_This updated GUI is recommended over command-line scripts._
 
 
 
@@ -19,7 +19,7 @@ link paper
 
 ### Running
 
-__sh Run.sh__
+sh Run.sh
  
 _Note: Several files require path updates (see individual helper scripts)_
 
