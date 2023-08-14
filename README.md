@@ -4,7 +4,7 @@ _FragPipe GUI is compatible with 2-stage search
 
 link paper
 
-This updated GUI is recommended over command-line scripts.
+**This updated GUI is recommended over command-line scripts.**
 
 
 
