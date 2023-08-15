@@ -1,6 +1,6 @@
 # Chemoproteogenomics
 
-_FragPipe GUI is compatible with 2-stage search 
+FragPipe GUI is compatible with 2-stage search 
 
 link paper
 
