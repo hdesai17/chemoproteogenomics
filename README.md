@@ -10,7 +10,7 @@ _This updated GUI is recommended over command-line scripts._
 
 ## 1. Custom Database Generation
 
-Generate sample-matched custom databases 
+Generate sample-matched peptide custom databases with both simple Uniprot ID FASTA headers or detailed headers.
 
 ### Running
 
