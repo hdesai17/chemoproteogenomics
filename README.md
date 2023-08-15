@@ -4,6 +4,8 @@ FragPipe GUI is compatible with 2-stage search. Instructions on running are loca
 
 link paper
 
+Suplementary Methods
+
 _The updated GUI is recommended over command-line scripts._
 
 
