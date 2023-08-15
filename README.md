@@ -10,16 +10,19 @@ _This updated GUI is recommended over command-line scripts._
 
 ## 1. Custom Database Generation
 
-
-
-
-## 2. MSFragger command-line 2-stage search
-
- Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation.
+Generate sample-matched custom databases 
 
 ### Running
 
-sh Run.sh
+`sh Run.sh`
+
+## 2. MSFragger command-line 2-stage search
+
+Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation.
+
+### Running
+
+`sh Run.sh`
  
 _Note: Several files require path updates (see individual helper scripts)_
 
