@@ -46,7 +46,7 @@ sed -i 's/decoy_prefix =.*/decoy_prefix = Reverse_/' "$fragger_params"
 Reference_Database=$(grep -oP "database_name = \K.*" $fragger_params)
 prefix=$(grep -oP "decoy_prefix = \K.*" $fragger_params)
 
-source /path/to/Pipeline.sh  
+source /path/to/2-stage-pipeline.sh  
 
 ##Get WT scan list#######
 echo "make output dir"
@@ -79,7 +79,7 @@ echo excluded_scan_list_file=${path}/scans.txt | cat - "$fragger_params" > temp 
 Reference_Database=$(grep -oP "database_name = \K.*" $fragger_params)
 prefix=$(grep -oP "decoy_prefix = \K.*" $fragger_params)
 
-source /path/to/Pipeline.sh  
+source /path/to/2-stage-pipeline.sh  
 
 sed -i 's/excluded_scan_list_file=.*//' "$fragger_params"
 
