@@ -14,7 +14,7 @@ Generate sample-matched custom databases
 
 ### Running
 
-`sh Run.sh`
+`sh customDB-run.sh`
 
 ## 2. MSFragger command-line 2-stage search
 
@@ -22,7 +22,7 @@ Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Pr
 
 ### Running
 
-`sh Run.sh`
+`sh 2-stage-run.sh`
  
 _Note: Several files require path updates (see individual helper scripts)_
 
