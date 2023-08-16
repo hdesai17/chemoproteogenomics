@@ -2,9 +2,9 @@
 
 FragPipe GUI is compatible with 2-stage search. 
 
-Instructions on running are located in
+Instructions on running are located in bioXiv publication
 
-[bioXiv linked](https://doi.org/10.1101/2023.08.12.553095) supplementary information.
+[Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) supplementary information.
 
 _The updated GUI is recommended over command-line scripts._
 
