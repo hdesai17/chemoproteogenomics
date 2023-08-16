@@ -6,8 +6,6 @@ Instructions on running are located in bioXiv publication \
 
 _The updated GUI is recommended over command-line scripts._
 
-
-
 ## 1. Custom Database Generation
 
 Generate sample-matched peptide variant-containing databases with both simple Uniprot ID FASTA headers or detailed headers.
@@ -18,9 +16,8 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 
 ## 2. MSFragger command-line 2-stage search
 
+Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. \
 _The updated GUI is recommended over command-line scripts._
-
-Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation.
 
 ### Running
 
