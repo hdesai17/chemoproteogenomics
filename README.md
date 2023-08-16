@@ -1,10 +1,10 @@
 # Chemoproteogenomics
 
-FragPipe GUI is compatible with 2-stage search. Instructions on running are located in
+FragPipe GUI is compatible with 2-stage search. 
 
-link paper
+Instructions on running are located in
 
-Suplementary Methods
+[bioXiv linked](https://doi.org/10.1101/2023.08.12.553095) supplementary information.
 
 _The updated GUI is recommended over command-line scripts._
 
