@@ -1,6 +1,6 @@
-# Chemoproteogenomics
-
-FragPipe GUI is compatible with 2-stage search. 
+# Chemoproteogenomics \
+This resource contains scripts for generating sample-specifc variant contiaining FASTA databases for use in searching mass-spectromtery based proteomics data as well as command-line processing for 2-stage MSFragger searches. \
+The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. 
 Instructions on running are located in bioXiv publication \
 [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) supplementary information.
 
