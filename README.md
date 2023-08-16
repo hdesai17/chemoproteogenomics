@@ -1,4 +1,4 @@
-# Chemoproteogenomics \
+# Chemoproteogenomics 
 This resource contains scripts for generating sample-specifc variant contiaining FASTA databases for use in searching mass-spectromtery based proteomics data as well as command-line processing for 2-stage MSFragger searches. \
 The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. 
 Instructions on running are located in bioXiv publication \
