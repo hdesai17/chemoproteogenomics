@@ -10,7 +10,7 @@ The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 
 
 ## Custom Database Generation
 
-Generate sample-matched peptide variant-containing databases from VCFs. Both minimal Uniprot ID FASTA headers or detailed headers can be used in searching mass-spectromtery based proteomics data
+Generate sample-matched peptide variant-containing databases from VCFs. Both minimal Uniprot ID FASTA headers ~or detailed headers~ can be used in searching mass-spectromtery based proteomics data
 
 #### Before Running
  1. Download or clone the repo
