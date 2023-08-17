@@ -33,7 +33,7 @@ _Note: R scripts require several packages including VariantAnnotation, GenomicFe
 
 
 
-## 2. MSFragger command-line 2-stage search
+### 2. MSFragger command-line 2-stage search
 
 Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. _The updated GUI is recommended over command-line scripts._
 
