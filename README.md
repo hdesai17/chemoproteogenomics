@@ -12,7 +12,7 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 
 ### Running
 
-`sh customDB-run.sh`
+`sh GenerateDB.sh`
 
 ## 2. MSFragger command-line 2-stage search
 
