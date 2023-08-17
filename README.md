@@ -9,7 +9,7 @@ Instructions on running are located in bioXiv manuscript: \
 
 ## Custom Database Generation
 
-Generate sample-matched peptide variant-containing databases with both simple Uniprot ID FASTA headers or detailed headers.
+Generate sample-matched peptide variant-containing databases with both minimal Uniprot ID FASTA headers or detailed headers.
 
 ### Before Running
 
