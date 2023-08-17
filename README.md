@@ -31,7 +31,8 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 
 
 ## MSFragger command-line 2-stage search
-:exclamation: _The updated GUI is recommended over command-line scripts._ \
+:exclamation: _The updated GUI is recommended over command-line scripts._ 
+
 Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. 
 
 ### Running
