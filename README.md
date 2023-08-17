@@ -26,6 +26,8 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 
 `sh GenerateDB.sh`
 
+_Note: R scripts require several packages including VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
+
 ## 2. MSFragger command-line 2-stage search
 
 Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. _The updated GUI is recommended over command-line scripts._
