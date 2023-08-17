@@ -1,7 +1,9 @@
 # Chemoproteogenomics 
-Table of Contents: \
+### Table of Contents: 
+
 This resource contains scripts for \
-[generating sample-specifc variant contiaining FASTA databases(https://github.com/hdesai17/chemoproteogenomics#custom-database-generation) for use in searching mass-spectromtery based proteomics data and [MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search).
+-[generating sample-specifc variant contiaining FASTA databases(https://github.com/hdesai17/chemoproteogenomics#custom-database-generation) for use in searching mass-spectromtery based proteomics data 
+-[MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search)
 
 The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. \
 Instructions on running are located in bioXiv manuscript: \
