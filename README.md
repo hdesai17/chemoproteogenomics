@@ -14,6 +14,8 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 
 #### Before Running
  1. Download or clone the repo
+
+    `git clone https://github.com/your-username/your-repo.git`
    
  2. VCF files must be in your working directory
    
