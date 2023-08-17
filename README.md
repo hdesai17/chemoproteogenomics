@@ -17,7 +17,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
    
  2. VCF files must be in your working directory
    
- 3. Make sure Annotations and Tools folders are in the working directory containing VCF files
+ 3. Make sure the working directory contains Annotations & Tools folders and GenerateBD.sh script
     
  4. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes \
     [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move to Annotations directory 
