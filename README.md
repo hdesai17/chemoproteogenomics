@@ -10,6 +10,12 @@ _The updated GUI is recommended over command-line scripts._
 
 Generate sample-matched peptide variant-containing databases with both simple Uniprot ID FASTA headers or detailed headers.
 
+### Before Running
+
+1. Download CustomDB_Generation folder and move to working directory containing VCF files
+2. Download genocode protein coding translations and annotations files as well as common SNPs missense changes here \
+and move to Annotations directory
+
 ### Running
 
 `sh GenerateDB.sh`
