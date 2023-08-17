@@ -10,11 +10,13 @@ The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 
 
 ## Custom Database Generation
 
-Generate sample-matched peptide variant-containing databases with both minimal Uniprot ID FASTA headers or detailed headers for use in searching mass-spectromtery based proteomics data. 
+Generate sample-matched peptide variant-containing databases from VCFs. Both minimal Uniprot ID FASTA headers or detailed headers can be used in searching mass-spectromtery based proteomics data
 
 #### Before Running
 
- 1. Move contents of CustomDB_Generation folder to working directory containing VCF files
+ 1. VCF files must be in your working directory
+   
+ 2. Move contents of CustomDB_Generation folder to working directory containing VCF files
     
     `cp -r CustomDB_Generation/* /path/to/your/working/directory/`
     
