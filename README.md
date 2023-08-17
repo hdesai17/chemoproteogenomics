@@ -29,6 +29,13 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 
 :warning: Scripts require several R packages including _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
 
+### Using with FragPipe
+
+Include in the Database tab on the second search
+
+### Post-processing 
+
+For minimal FASTA headers, additional post-processing is required to obtain variant IDs.
 
 ## MSFragger command-line 2-stage search
 :exclamation: _The updated GUI is recommended over command-line scripts._ 
