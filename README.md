@@ -18,13 +18,13 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
    
  2. Move contents of CustomDB_Generation folder to working directory containing VCF files
     
-    `cp -r CustomDB_Generation/* /path/to/your/working/directory/`
+    `cp -r CustomDB_Generation/* /path/to/working/directory/`
     
  3. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes \
     [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move to Annotations directory 
     
-    `mv *gencode /path/to/your/working/directory/Annotations/` \
-    `mv *common /path/to/your/working/directory/Annotations/`
+    `mv *gencode /path/to/working/directory/Annotations/` \
+    `mv *common /path/to/working/directory/Annotations/`
 
 #### Running
 
