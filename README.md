@@ -27,7 +27,7 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 
 `./GenerateDB.sh` or `sh GenerateDB.sh`
 
-:warning: R scripts require several packages including _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
+:warning: Scripts require several R packages including _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
 
 
 ## MSFragger command-line 2-stage search
