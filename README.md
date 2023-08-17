@@ -12,7 +12,7 @@ The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 
 
 Generate sample-matched peptide variant-containing databases with both minimal Uniprot ID FASTA headers or detailed headers for use in searching mass-spectromtery based proteomics data. 
 
-### Before Running
+#### Before Running
 
  1. Move contents of CustomDB_Generation folder to working directory containing VCF files
     
@@ -24,7 +24,7 @@ Generate sample-matched peptide variant-containing databases with both minimal U
     `mv *gencode /path/to/your/working/directory/Annotations/` \
     `mv *common /path/to/your/working/directory/Annotations/`
 
-### Running
+#### Running
 
 `./GenerateDB.sh` or `sh GenerateDB.sh`
 
@@ -37,11 +37,11 @@ For minimal FASTA headers, additional post-processing is required to obtain vari
 
 Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. 
 
-### Before Running
+#### Before Running
 
 :warning: Several files require path updates (see individual helper scripts)
 
-### Running
+#### Running
 
 `./2-stage-run.sh` or `sh 2-stage-run.sh`
  
