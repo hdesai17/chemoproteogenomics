@@ -13,14 +13,13 @@ The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 
 Generate sample-matched peptide variant-containing databases from VCFs. Both minimal Uniprot ID FASTA headers or detailed headers can be used in searching mass-spectromtery based proteomics data
 
 #### Before Running
-
- 1. VCF files must be in your working directory
+ 1. Download or clone the repo
    
- 2. Move contents of CustomDB_Generation folder to working directory containing VCF files
+ 2. VCF files must be in your working directory
+   
+ 3. Make sure Annotations and Tools folders are in the working directory containing VCF files
     
-    `cp -r CustomDB_Generation/* /path/to/working/directory/`
-    
- 3. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes \
+ 4. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes \
     [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move to Annotations directory 
     
     `mv *gencode /path/to/working/directory/Annotations/` \
@@ -41,10 +40,12 @@ Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Pr
 
 #### Before Running
 
+1. Download or clone the repo
+   
 :warning: Several files require path updates (see individual helper scripts)
 
 #### Running
-
+   
 `./2-stage-run.sh` or `sh 2-stage-run.sh`
  
 
