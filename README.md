@@ -5,7 +5,7 @@ The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 
 Instructions on running are located in bioXiv manuscript: \
 [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information.
 
-:exclamation: _The updated GUI is recommended over command-line scripts (2)._
+:exclamation: _The updated GUI is recommended over command-line scripts provided here._
 
 ## Custom Database Generation
 
