@@ -16,8 +16,8 @@ Generate sample-matched peptide variant-containing databases with both simple Un
     
     `cp -r CustomDB_Generation/* /path/to/your/working/directory/`
     
- 3. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes here \
-    and move to Annotations directory 
+ 3. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes \
+    [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move to Annotations directory 
     
     `mv *gencode /path/to/your/working/directory/Annotations/` \
     `mv *common /path/to/your/working/directory/Annotations/`
