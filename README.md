@@ -28,7 +28,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 
 `./GenerateDB.sh` or `sh GenerateDB.sh`
 
-:warning: Scripts depend on several R packages including _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
+:warning: Scripts depend on several R packages including _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply. As well Python v3.0+_
 
 #### Outputs
 
