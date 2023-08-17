@@ -38,5 +38,5 @@ Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Pr
 
 `./2-stage-run.sh` or `sh 2-stage-run.sh`
  
-_Note: Several files require path updates (see individual helper scripts)_
+:warning: Several files require path updates (see individual helper scripts)
 
