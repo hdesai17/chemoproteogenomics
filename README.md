@@ -17,7 +17,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 
     `git clone https://github.com/hdesai17/chemoproteogenomics.git`
    
- 2. Move VCF files into root directory /chemoproteogenomcis or make sure the working directory contains Annotations/Tools folders and GenerateBD.sh script
+ 2. Move VCF files into root directory (/chemoproteogenomics) or make sure the working directory contains VCFs, Annotations/Tools folders and GenerateBD.sh script
     
  3. Download Genocode v28 protein coding translations and GTF annotation files as well as common SNPs missense changes [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move to Annotations directory 
     
