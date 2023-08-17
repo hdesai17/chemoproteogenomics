@@ -38,7 +38,7 @@ In the Custom_Databases folder, there are variations of FASTA databases:
 - _rev = contains reverse sequences specified as REV_
 - _dedup = redundant peptide sequences are removed, regardless of transcript ID_
 
-:warning: For minimal FASTA headers, additional post-processing is required to obtain variant IDs after using in FragPipe searches.
+:warning: For minimal FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
 
 ## MSFragger command-line 2-stage search
 :exclamation: _The updated GUI is recommended over command-line scripts._ 
