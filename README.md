@@ -30,7 +30,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 
 #### Outputs
 
-In the Custom_Databases folder, there are variations of FASTA databases \
+In the Custom_Databases folder, there are variations of FASTA databases:
 - 2TS = two tryptic sites flanking variant sites
 - simple = only Uniprot ID (minimal) headers
 - rev = contains reverse sequences specified as REV
