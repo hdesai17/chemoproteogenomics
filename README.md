@@ -33,10 +33,10 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 #### Outputs
 
 In the Custom_Databases folder, there are variations of FASTA databases:
-_- 2TS = two tryptic sites flanking variant sites; otherwise, they are whole protein sequences_
-_- simple = only Uniprot ID (minimal) headers_
-_- rev = contains reverse sequences specified as REV_
-_- dedup = redundant peptide sequences are removed, regardless of transcript ID_
+- _2TS = two tryptic sites flanking variant sites; otherwise, they are whole protein sequences_
+- _simple = only Uniprot ID (minimal) headers_
+- _rev = contains reverse sequences specified as REV_
+- _dedup = redundant peptide sequences are removed, regardless of transcript ID_
 
 :warning: For minimal FASTA headers, additional post-processing is required to obtain variant IDs after using in FragPipe searches.
 
