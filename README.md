@@ -37,9 +37,13 @@ For minimal FASTA headers, additional post-processing is required to obtain vari
 
 Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. 
 
+### Before Running
+
+:warning: Several files require path updates (see individual helper scripts)
+
 ### Running
 
 `./2-stage-run.sh` or `sh 2-stage-run.sh`
  
-:warning: Several files require path updates (see individual helper scripts)
+
 
