@@ -5,7 +5,7 @@ The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 
 Instructions on running are located in bioXiv manuscript: \
 [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information.
 
-_The updated GUI is recommended over command-line scripts._
+_The updated GUI is recommended over command-line scripts (2)._
 
 ## 1. Custom Database Generation
 
@@ -28,6 +28,10 @@ Generate sample-matched peptide variant-containing databases with both simple Un
 `./GenerateDB.sh` or `sh GenerateDB.sh`
 
 _Note: R scripts require several packages including VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
+
+
+
+
 
 ## 2. MSFragger command-line 2-stage search
 
