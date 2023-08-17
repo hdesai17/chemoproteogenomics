@@ -28,6 +28,14 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 
 `./GenerateDB.sh` or `sh GenerateDB.sh`
 
+#### Outputs
+
+In the Custom_Databases folder, there are variations of FASTA databases \
+- 2TS = two tryptic sites flanking variant sites
+- simple = only Uniprot ID (minimal) headers
+- rev = contains reverse sequences specified as REV
+- dedup = redundant peptide sequences are removed, regardless of transcript ID
+
 :warning: Scripts depend on several R packages including _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, and pbapply._
 
 :warning: For minimal FASTA headers, additional post-processing is required to obtain variant IDs after using in FragPipe searches.
