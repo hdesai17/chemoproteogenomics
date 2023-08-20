@@ -11,7 +11,7 @@ Instructions on running are located in bioXiv manuscript: [Multi-omic stratifica
 
 ## Custom Database Generation
 
-Generate sample-matched peptide variant-containing databases from VCFs. Both minimal Uniprot ID FASTA headers ~or detailed headers~ can be used in searching mass-spectromtery based proteomics data
+Generate sample-matched peptide variant-containing databases from VCFs. Both detailed Uniprot ID FASTA headers or minimal headers can be used in searching mass-spectromtery based proteomics data
 
 #### Before Running
  1. Download or clone the repo
@@ -38,11 +38,13 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both min
 
 In the Custom_Databases folder, there are variations of FASTA databases:
 - _2TS = two tryptic sites flanking variant sites, otherwise, they are whole protein sequences_
-- _simple = only Uniprot ID (minimal) headers_
 - _rev = contains reverse sequences specified as REV_
 - _dedup = redundant peptide sequences are removed, regardless of transcript ID_
+- _simple = only Uniprot ID (minimal) headers_
 
-:warning: For minimal FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
+:exclamation: In FragPipe search outputs, the 'Protein' column will contain the fasta header information; though, it is recommended to map to Reference database for tryptic peptides that fall outisde of variant region
+
+:warning: For minimal (simple) FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
 
 ## MSFragger command-line 2-stage search
 :exclamation: _The updated GUI is recommended over command-line scripts._ 
