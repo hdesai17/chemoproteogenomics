@@ -42,7 +42,7 @@ In the Custom_Databases folder, there are variations of FASTA databases:
 - _dedup = redundant peptide sequences are removed, regardless of transcript ID_
 - _simple = only Uniprot ID (minimal) headers_
 
-:exclamation: In FragPipe search outputs, the 'Protein' column will contain the fasta header information; though, it is recommended to map to Reference database for tryptic peptides that fall outisde of variant region
+:exclamation: In FragPipe search outputs, the 'Protein' column will contain the fasta header information; though, it is recommended to re-map peptides to reference databases for possible tryptic peptides that fall outisde of the variant region.
 
 :warning: For minimal (simple) FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
 
