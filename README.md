@@ -32,7 +32,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 
 :warning: Requirements: 
 
- - R packages _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, pbapply and dependencies_
+ - R packages _VariantAnnotation, GenomicFeatures, Biostrings, BSgenome.Hsapiens.UCSC.hg38, stringr, svMisc, pbapply_ and dependencies
  - Python v3.0+
 
 #### Outputs
