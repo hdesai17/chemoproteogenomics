@@ -1,7 +1,7 @@
 # Chemoproteogenomics 
 ### Table of Contents: 
 
-- [Generating sample-specifc variant contiaining FASTA databases](https://github.com/hdesai17/chemoproteogenomics#custom-database-generation) 
+- [Generating sample-specifc variant containing FASTA databases](https://github.com/hdesai17/chemoproteogenomics#custom-database-generation) 
 + [MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search)
 
 :exclamation: _The updated GUI is recommended over command-line scripts provided here._ 
