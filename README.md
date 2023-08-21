@@ -5,7 +5,7 @@
 - [Generating sample-specifc containing FASTA databases with all combinations of variants]
 - [MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search)
 
->[!NOTE]
+>[!NOTE] :exclamation:
 >_The updated GUI is recommended over command-line scripts provided here._ 
 
 The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. \
