@@ -5,7 +5,8 @@
 - [Generating sample-specifc containing FASTA databases with all combinations of variants]
 - [MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search)
 
-:exclamation: _The updated GUI is recommended over command-line scripts provided here._ 
+>[!NOTE]
+>_The updated GUI is recommended over command-line scripts provided here._ 
 
 The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. \
 Instructions on running are located in bioXiv manuscript: [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information.
@@ -53,13 +54,15 @@ sp|Uniprot-ID|Ensembl Gene ID|Gene Name|Ensembl Transcript ID|Internal-TxID_Cell
 The internal TxID is used in makeDB.R to match missense mutations to proteins
 
 
-:exclamation: In FragPipe search outputs, the 'Protein' column will contain the fasta header information; though, it is recommended to re-map peptides to reference databases for any possible tryptic peptides that fall outisde of the variant region (these will be limited in the case of 2-stage searches).
+>[!NOTE]
+>In FragPipe search outputs, the 'Protein' column will contain the fasta header information; though, it is recommended to re-map peptides to reference databases for any possible tryptic peptides that fall outisde of the variant region (these will be limited in the case of 2-stage searches).
 
 >[!WARNING]
 >For minimal (simple) FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
 
 ## MSFragger command-line 2-stage search
-:exclamation: _The updated GUI is recommended over command-line scripts._ 
+>[!NOTE]
+>_The updated GUI is recommended over command-line scripts._ 
 
 Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Prophet for post-processing with optional IonQuant quantitation. 
 
