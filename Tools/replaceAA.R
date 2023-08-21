@@ -23,7 +23,7 @@ for (i in 1:length(all_missense)){
     print("not in the list")
     next
   }
-  if (length(temp[[1]]) >= as.numeric(proloc)){
+  if (length(temp[[1]]) >= as.numeric(proloc)[1]){
     if (length(proloc) > 1){
       seq=seq(as.numeric(proloc[[1]]),as.numeric(proloc[[2]]))
     }else{seq=proloc}
