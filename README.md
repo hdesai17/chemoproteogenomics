@@ -32,10 +32,10 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 
 `./GenerateDB.sh` or `sh GenerateDB.sh`
 
-:warning: Requirements: 
-
- - R packages _VariantAnnotation, BSgenome.Hsapiens.UCSC.hg38, svMisc, pbapply_ and any other dependencies
- - Python v3.0+
+>[!WARNING]
+>Requirements: 
+>- R packages _VariantAnnotation, BSgenome.Hsapiens.UCSC.hg38, svMisc, pbapply_ and any other dependencies
+>- Python v3.0+
 
 #### Outputs
 
@@ -69,7 +69,8 @@ Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Pr
 
   `git clone https://github.com/hdesai17/chemoproteogenomics.git`
   
-:warning: Several files require path updates (see individual helper scripts)
+>[!WARNING]
+>Several files require path updates (see individual helper scripts)
 
 #### Running
    
