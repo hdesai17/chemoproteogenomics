@@ -8,11 +8,11 @@ library(pbapply)
 library(Biostrings)
 
 #Load objects and inputs
-load("Tools/seqinfo1.RData")
-load("Tools/ccds.RData")
-load("Tools/common_snps_missense.RData")
-gtf_file <- "Tools/gencode.v28.annotation.gtf"
-prot<-readAAStringSet("Tools/gencode.v28.pc_translations.fa", format = "fasta", use.names = T)
+load("Annotations/seqinfo1.RData")
+load("Annotations/ccds.RData")
+load("Annotations/common_snps_missense.RData")
+gtf_file <- "Annotations/gencode.v28.annotation.gtf"
+prot<-readAAStringSet("Annotations/gencode.v28.pc_translations.fa", format = "fasta", use.names = T)
 directory<-getwd()                               
 db_directory<-paste(getwd(),"/Custom_Databases/",sep="")
 
