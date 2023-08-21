@@ -44,8 +44,8 @@ In the Custom_Databases folder, there are variations of FASTA databases:
 - _simple = only Uniprot ID (minimal) headers_
 
 Example header with annotations: 
->sp| Uniprot-ID | Gene ID | Gene | Transcript ID | Internal TxID_CellLine_NGS-Source |AA Mutation| \
->sp|P01116-1|ENSG00000133703.11|KRAS|ENST00000256078.8|122572-H358_RARE_RNA-G12C|12c| \
+>sp| Uniprot-ID | Gene ID | Gene | Transcript ID | Internal TxID_CellLine_NGS-Source |AA Mutation|\
+>sp|P01116-1|ENSG00000133703.11|KRAS|ENST00000256078.8|122572-H358_RARE_RNA-G12C|12c|\
 The internal TxID is used in makeDB.R to match missense mutations to proteins
 
 
