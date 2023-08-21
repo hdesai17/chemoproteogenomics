@@ -55,8 +55,8 @@ The internal TxID is used in makeDB.R to match missense mutations to proteins
 
 :exclamation: In FragPipe search outputs, the 'Protein' column will contain the fasta header information; though, it is recommended to re-map peptides to reference databases for any possible tryptic peptides that fall outisde of the variant region (these will be limited in the case of 2-stage searches).
 
-[!WARNING]
-For minimal (simple) FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
+>[!WARNING]
+>For minimal (simple) FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
 
 ## MSFragger command-line 2-stage search
 :exclamation: _The updated GUI is recommended over command-line scripts._ 
