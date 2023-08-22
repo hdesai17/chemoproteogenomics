@@ -20,9 +20,9 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 flowchart LR;
    .vcf--|VariantAnnotation|SAAVs;
    TxDB --SAAVs;
-   gencode_annotations.gtf--|GenomicFeatures|TxDB;
+   gencode_annot.gtf--|GenomicFeatures|TxDB;
    SAAVs--Missense-DB;
-   gencode_translations.fa--Missense-DB;
+   gencode_transl.fa--Missense-DB;
 ```
 
 #### Before Running
