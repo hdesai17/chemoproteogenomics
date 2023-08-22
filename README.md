@@ -25,10 +25,10 @@ flowchart LR;
       direction TB
       .vcf+.gtf-->|<i>GenomicFeatures<i>|TxDB
    end
-   TxDB-->|<i>VariantAnnotation<i>|Predicted-SAAVs
+   TxDB-->|<i>VariantAnnotation<i>|Predict-SAAVs
    subgraph Make-DB
       direction TB
-      Predicted-SAAVs---protein.fa
+      Predict-SAAVs---prot.fa
    end
    Make-DB-->Missense-DB;
 ```
