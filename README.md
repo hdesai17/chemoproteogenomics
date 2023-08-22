@@ -22,10 +22,10 @@ flowchart LR;
    .gtf-->|GenomicFeatures|TxDB
    end
    subgraph two
-   .vcf--Make-TxDB
+   .vcf-->Predicted-SAAVs
    end
-   Predicted-SAAVs-->SAAVs
-   SAAVs-->Missense-DB;
+   Make-TxDB-->two
+   two-->Missense-DB;
    .fa-->Missense-DB;
 
 ```
