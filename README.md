@@ -20,9 +20,10 @@ VCF processing:
 
 ```mermaid
 
-flowchart TB;
+flowchart LR;
+   subgraph Make-TxDB
    .vcf+.gtf-->|<i>GenomicFeatures<i>|TxDB
-
+   end
    TxDB-->|<i>VariantAnnotation<i>|Predicted-SAAVs
    subgraph Make-DB
    Predicted-SAAVs---protein.fa
