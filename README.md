@@ -17,11 +17,12 @@ Instructions on running are located in bioXiv manuscript: [Multi-omic stratifica
 Generate sample-matched peptide variant-containing databases from VCFs. Both detailed Uniprot ID FASTA headers or minimal headers can be used in searching mass-spectromtery based proteomics data
 
 ```mermaid
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR;
-   subgraph "*GenomicFeatures*"
+   subgraph "`*GenomicFeatures*`"
    .vcf-->|.gtf|TxDB
    end
-   "*GenomicFeatures*"-->|"*VariantAnnotation*"|Predicted-SAAVs
+   "`*GenomicFeatures*`"-->|"`*VariantAnnotation*`"|Predicted-SAAVs
    Predicted-SAAVs-->|protein.fa|Missense-DB;
  
 
