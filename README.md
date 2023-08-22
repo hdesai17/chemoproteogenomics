@@ -19,7 +19,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 ```mermaid
 
 flowchart LR;
-   subgraph <b>GenomicFeatures<b>
+   subgraph <i>GenomicFeatures<i>
    .vcf-->|.gtf|TxDB
    end
    GenomicFeatures-->|VariantAnnotation|Predicted-SAAVs
