@@ -22,7 +22,7 @@ flowchart LR;
    .gtf-->|GenomicFeatures|TxDB
    end
    subgraph VariantAnnotation
-   .vcf--Make-TxDB
+   .vcf-->Make-TxDB
    end
    Predicted-SAAVs-->SAAVs
    SAAVs-->Missense-DB;
