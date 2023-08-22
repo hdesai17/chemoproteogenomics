@@ -21,7 +21,7 @@ graph TD;
    VCF-->AA-Changes;
    TxDB -->AA-Changes;
    GTF-->AA-Changes;
-   Predicted-Changes-->Missense-DB;
+   AA-Changes-->Missense-DB;
    Protein-seqs-->Missense-DB;
 ```
 
