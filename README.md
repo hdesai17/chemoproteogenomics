@@ -18,9 +18,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 
 ```mermaid
 flowchart LR;
-   .vcf-->D[ ]:::empty
-   D[ ]:::empty-->|VariantAnnotation|SAAVs;
-   TxDB -->|VariantAnnotation|D[ ]:::empty;
+   .vcf--|VariantAnnotation|TxDB-->SAAVs;
    .gtf-->|GenomicFeatures|TxDB;
    SAAVs-->Missense-DB;
    .fa-->Missense-DB;
