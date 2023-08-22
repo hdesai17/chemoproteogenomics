@@ -18,10 +18,11 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+   VCF-->Predicted Coding Changes;
+    TxDB -->Predicted Coding Changes;
+    GTF-->Predicted Coding Changes;
+    Predicted Coding Changes-->Missense-containing database;
+Protein Sequences-->Missense-containing database;
 ```
 
 #### Before Running
