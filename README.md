@@ -16,6 +16,8 @@ Instructions on running are located in bioXiv manuscript: [Multi-omic stratifica
 
 Generate sample-matched peptide variant-containing databases from VCFs. Both detailed Uniprot ID FASTA headers or minimal headers can be used in searching mass-spectromtery based proteomics data
 
+VCF processing:
+
 ```mermaid
 
 flowchart TB;
