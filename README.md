@@ -20,7 +20,7 @@ VCF processing:
 
 ```mermaid
 
-flowchart TB;
+flowchart LR;
    subgraph Make-TxDB
       direction TB
       .vcf+.gtf-->|<i>GenomicFeatures<i>|TxDB
