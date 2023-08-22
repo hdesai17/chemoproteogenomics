@@ -24,7 +24,7 @@ flowchart TB;
    subgraph Predict-SAAVs
    Predicted-SAAVs---protein.fa
    end
-   Predicted-SAAVs-->Missense-DB;
+   Predict-SAAVs-->Missense-DB;
 ```
 
 #### Before Running
