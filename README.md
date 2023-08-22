@@ -73,7 +73,7 @@ Process .raw MS files with an MSFragger pipeline using Philospher and Peptide Pr
 
   `git clone https://github.com/hdesai17/chemoproteogenomics.git`
   
->[!WARNING]
+>[!IMPORTANT]
 >Several files require path updates (see individual helper scripts)
 
 #### Running
