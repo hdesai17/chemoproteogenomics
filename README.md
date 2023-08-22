@@ -22,7 +22,7 @@ flowchart LR;
    subgraph <i>GenomicFeatures<i>
    .vcf-->|.gtf|TxDB
    end
-   GenomicFeatures-->|<i>VariantAnnotation<i>|Predicted-SAAVs
+   <i>GenomicFeatures<i>-->|<i>VariantAnnotation<i>|Predicted-SAAVs
    Predicted-SAAVs-->|protein.fa|Missense-DB;
 ```
 
