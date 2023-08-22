@@ -22,10 +22,12 @@ VCF processing:
 
 flowchart LR;
    subgraph Make-TxDB
+   direction TB
    .vcf+.gtf-->|<i>GenomicFeatures<i>|TxDB
    end
    TxDB-->|<i>VariantAnnotation<i>|Predicted-SAAVs
    subgraph Make-DB
+   direction TB
    Predicted-SAAVs---protein.fa
    end
    Make-DB-->Missense-DB;
