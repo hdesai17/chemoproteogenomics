@@ -24,6 +24,7 @@ flowchart LR;
    .gtf-->|GenomicFeatures|TxDB;
    SAAVs-->Missense-DB;
    .fa-->Missense-DB;
+   classDef empty width:0px,height:0px;
 ```
 
 #### Before Running
