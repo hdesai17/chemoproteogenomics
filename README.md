@@ -22,7 +22,7 @@ flowchart LR;
    TxDB --SAAVs;
    gencode_annotations.gtf--|GenomicFeatures|TxDB;
    SAAVs--Missense-DB;
-   gencode_pc_translations.fa--Missense-DB;
+   gencode_translations.fa--Missense-DB;
 ```
 
 #### Before Running
