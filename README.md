@@ -18,10 +18,10 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 
 ```mermaid
 graph TD;
-   VCF-->AA-Changes;
-   TxDB -->AA-Changes;
-   GTF-->AA-Changes;
-   AA-Changes-->Missense-DB;
+   VCF-->Amino-Acid Changes;
+   TxDB -->Amino-Acid Changes;
+   GTF-->Amino-Acid Changes;
+   Amino-Acid Changes-->Missense-DB;
    Protein-seqs-->Missense-DB;
 ```
 
