@@ -22,7 +22,6 @@ flowchart LR;
    .vcf-->|.gtf|TxDB
    end
    Make-TxDB-->|VariantAnnotation|Predicted-SAAVs
-   Make-TxDB-->Predicted-SAAVs
    Predicted-SAAVs-->|.fa|Missense-DB;
  
 
