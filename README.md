@@ -24,7 +24,10 @@ flowchart LR;
    end
    Make-TxDB-->|<i>GenomicFeatures<i>|TxDB
    TxDB-->|<i>VariantAnnotation<i>|Predicted-SAAVs
-   Predicted-SAAVs-->|protein.fa|Missense-DB;
+   subgraph Predict-SAAVs
+   Predicted-SAAVs---protein.fa
+   end
+   Predicted-SAAVs-->Missense-DB;
 ```
 
 #### Before Running
