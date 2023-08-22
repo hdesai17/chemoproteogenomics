@@ -30,14 +30,14 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
     `mv *gencode /path/to/working/directory/Annotations/` \
     `mv *common /path/to/working/directory/Annotations/`
 
+>[!IMPORTANT]
+>Several requirements necessary to run
+>- R packages _VariantAnnotation, BSgenome.Hsapiens.UCSC.hg38, svMisc, pbapply_ and any other dependencies
+>- Python v3.0+
+
 #### Running
 
 `./GenerateDB.sh` or `sh GenerateDB.sh`
-
->[!WARNING]
->Requirements: 
->- R packages _VariantAnnotation, BSgenome.Hsapiens.UCSC.hg38, svMisc, pbapply_ and any other dependencies
->- Python v3.0+
 
 #### Outputs
 
