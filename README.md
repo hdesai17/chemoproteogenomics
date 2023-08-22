@@ -28,10 +28,10 @@ flowchart LR;
    
    subgraph Make-DB
       direction TB
-      Predict-SAAVs---prot.fa
+      Predicted-SAAVs---prot.fa
    end
    Make-TxDB-->|<i>VariantAnnotation<i>|Make-DB
-   Make-DB-->Missense-DB;
+   Make-DB-->Missense-Database;
 ```
 
 #### Before Running
