@@ -20,7 +20,7 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 
 flowchart TB;
    .vcf+.gtf-->|<i>GenomicFeatures<i>|TxDB
-flowchart LR;
+
    TxDB-->|<i>VariantAnnotation<i>|Predicted-SAAVs
    subgraph Make-DB
    Predicted-SAAVs---protein.fa
