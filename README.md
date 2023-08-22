@@ -19,10 +19,10 @@ Generate sample-matched peptide variant-containing databases from VCFs. Both det
 ```mermaid
 
 flowchart LR;
-   subgraph ""
+   subgraph Make-TxDB
    .vcf---.gtf
    end
-   ""-->|<i>GenomicFeatures<i>|TxDB
+   Make-TxDB-->|<i>GenomicFeatures<i>|TxDB
    TxDB-->|<i>VariantAnnotation<i>|Predicted-SAAVs
    Predicted-SAAVs-->|protein.fa|Missense-DB;
 ```
