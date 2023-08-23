@@ -19,7 +19,6 @@ Generate sample-matched peptide variant-containing databases from VCFs. Outputs 
 VCF processing:
 
 ```mermaid
-
 flowchart LR;
    subgraph Make-TxDB
       direction TB
@@ -55,7 +54,7 @@ flowchart LR;
 
 #### Running
 
-`./GenerateDB.sh` or `sh GenerateDB.sh`
+`./GenerateDB.sh [sample name]` or `sh GenerateDB.sh [sample name]`
 
 #### Outputs
 
