@@ -28,7 +28,7 @@ flowchart LR;
    
    subgraph Make-DB
       direction TB
-      Predicted-SAAVs---prot.fa
+      Predicted-SAAVs---protein.fasta
    end
    Make-TxDB-->|<i>VariantAnnotation<i>|Make-DB
    Make-DB-->Missense-Database;
