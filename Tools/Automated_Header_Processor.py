@@ -1,5 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
+# Create an argument parser
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--sample-name", required=True, help="Name of the sample")
+
+# Parse the command-line arguments
+args = parser.parse_args()
+
+# Access the sample name
+sample_name = args.sample_name
+
+# Now you can use the sample_name variable in your Python script
+print("Processing sample:", sample_name)
 
 # In[1]:
 
@@ -10,7 +23,7 @@ import re
 # In[2]:
 
 
-cell_lines = ["CellLine"]
+cell_lines = [sample_name]
 old_dbs = []
 new_dbs = []
 

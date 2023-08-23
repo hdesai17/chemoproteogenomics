@@ -1,3 +1,10 @@
+
+# Access the environment variable
+my_argument <- Sys.getenv("MY_ARGUMENT")
+sample_name<-my_argument
+# Now you can use 'my_argument' in your R script
+cat("Sample Name:", sample_name, "\n")
+
 #Load Packages
 library(VariantAnnotation)
 library(GenomicFeatures)
@@ -49,6 +56,7 @@ pep<-prot[which(names(prot)%in%ccds$nucleotide_ID),] ##the peps that correspond 
 pep_txids<-biomaRt::select(txdb, names(pep), columns= c("TXID","GENEID"),"TXNAME")
 names(pep)<-pep_txids[,3]
 subseq(pep, start =width(pep)+1)<-"*"   ###puts an asterisk at the end of every AA sequence
+
 rm(txdb)
 print("Done")
 
@@ -81,7 +89,7 @@ for (i in 1:length(fnames)){
   list <- c(list, assign(paste("all_missense", fnames2[i], sep = "_"), all_missense))
 }
 print("Done")
-
+save(all_missense, file="/hdd/heta/all_missense.RData")
 #RNA<-do.call(c,RNA_missense_all)#Exome<-do.call(c,Exome_missense_all)#all_missense<-c(RNA,Exome)
 
 print("Get a dataframe of predicted coding changes with gene names and transcript IDs")
@@ -158,13 +166,21 @@ names(all_custom_peps)<-gsub(" ","-",names(all_custom_peps))
 print("Write XStringSet")
 setwd(directory)
 system("mkdir Custom_Databases")
-Biostrings::writeXStringSet(all_custom_peps, filepath = "Custom_Databases/CellLine_custom.fa")
+Biostrings::writeXStringSet(all_custom_peps, filepath = paste("Custom_Databases/",sample_name,"_custom.fa",sep = ""))
 print("Done")
 setwd(db_directory)
-system("python3 ../Tools/Automated_DB_Processor.py")
-system("python3 ../Tools/Automated_Header_Processor.py")
 
-fasta<-readAAStringSet(file="2TS_CellLine_edited.fa") ##2TS_blank_ goes here
+python_script <- "../Tools/Automated_DB_Processor.py"
+command <- paste("python3", python_script, "--sample-name", sample_name)
+# Execute the shell command to run the Python script
+system(command)
+python_script <- "../Tools/Automated_Header_Processor.py"
+command <- paste("python3", python_script, "--sample-name", sample_name)
+# Execute the shell command to run the Python script
+system(command)
+
+
+fasta<-readAAStringSet(file=paste("2TS_",sample_name,"_edited.fa",sep = "")) ##2TS_blank_ goes here
 names(fasta)<-sub("sp\\|","", names(fasta))
 names(fasta)<-sub("-.*","", names(fasta))
 names(fasta)<-sub("\\|.*","", names(fasta))
@@ -172,15 +188,23 @@ fasta<-fasta[!duplicated(fasta)] #remove same tryptic peptides derived from diff
 rev_fasta<-Biostrings::reverse(fasta)
 names(rev_fasta)<-paste0("rev_",names(rev_fasta))
 final_fasta<-c(fasta,rev_fasta)
-writeXStringSet(final_fasta, filepath = "2TS_CellLine_edited_simple_dedup_rev.fa", format = "fasta", width=800)
+writeXStringSet(final_fasta, filepath = paste("2TS_",sample_name,"_edited_simple_dedup_rev.fa",sep = ""), format = "fasta", width=800)
 
-fasta2<-readAAStringSet(file="2TS_CellLine_edited.fa") ##2TS_blank_ goes here
+fasta2<-readAAStringSet(file=paste("2TS_",sample_name,"_edited.fa",sep = "")) ##2TS_blank_ goes here
 fasta2<-fasta2[!duplicated(fasta2)]
 rev_fasta2<-Biostrings::reverse(fasta2)
 names(rev_fasta2)<-paste0("rev_",names(rev_fasta2))
 final_fasta2<-c(fasta2,rev_fasta2)
-writeXStringSet(final_fasta2, filepath = "2TS_CellLine_edited_dedup_rev.fa", format = "fasta", width=800)
+writeXStringSet(final_fasta2, filepath = paste("2TS_",sample_name,"_edited_dedup_rev.fa",sep = ""), format = "fasta", width=800)
 
 setwd(db_directory)
-system("dd if=2TS_CellLine_edited_simple_dedup_rev.fa of=2TS_CellLine_edited_simple_dedup_rev_upper.fa conv=ucase")
-system("dd if=2TS_CellLine_edited_dedup_rev.fa of=2TS_CellLine_edited_dedup_rev_upper.fa conv=ucase")
+# Construct the shell command
+input_file <- paste("2TS_", sample_name, "_edited_dedup_rev.fa", sep = "")
+output_file <- paste("2TS_", sample_name, "_edited_dedup_rev_upper.fa", sep = "")
+command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
+# Execute the shell command
+system(command)
+
+
+#system("dd if=2TS_CellLine_edited_simple_dedup_rev.fa of=2TS_CellLine_edited_simple_dedup_rev_upper.fa conv=ucase")
+#system("dd if=2TS_CellLine_edited_dedup_rev.fa of=2TS_CellLine_edited_dedup_rev_upper.fa conv=ucase")
