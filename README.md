@@ -32,8 +32,6 @@ flowchart LR;
    Make-TxDB-->|<i>VariantAnnotation<i>|Make-DB
    Make-DB-->Missense-Database;
 ```
->[!IMPORTANT]
->The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf
 
 #### Before Running
  1. Download or clone the repo
@@ -42,9 +40,12 @@ flowchart LR;
    
  2. Move VCF file into the root directory (_../chemoproteogenomics_) or make sure the working directory contains VCF, Annotations/Tools folders and GenerateBD.sh script
 
+>[!IMPORTANT]
+>The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf
+
     `mv *.vcf chemoproteogenomics`
     
- 4. Download Genocode v28 protein coding translations and GTF annotation files as well as RData file of common missense SNPs [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move all three into Annotations directory 
+ 3. Download Genocode v28 protein coding translations and GTF annotation files as well as RData file of common missense SNPs [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move all three into Annotations directory 
     
     `mv *gencode /path/to/working/directory/Annotations/` \
     `mv *common /path/to/working/directory/Annotations/`
