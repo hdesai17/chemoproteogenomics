@@ -212,3 +212,11 @@ output_file <- paste("2TS_", sample_name, "_edited_simple_dedup_rev_upper.fa", s
 command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
 # Execute the shell command
 system(command)
+
+setwd(db_directory)
+# Construct the shell command
+input_file <- paste(sample_name, "_custom.fa", sep = "")
+output_file <- paste(sample_name, "_custom_upper.fa", sep = "")
+command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
+# Execute the shell command
+system(command)
