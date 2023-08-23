@@ -32,6 +32,8 @@ flowchart LR;
    Make-TxDB-->|<i>VariantAnnotation<i>|Make-DB
    Make-DB-->Missense-Database;
 ```
+>[!IMPORTANT]
+>The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf
 
 #### Before Running
  1. Download or clone the repo
