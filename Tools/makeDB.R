@@ -1,5 +1,4 @@
 
-
 # Access the environment variable
 my_argument <- Sys.getenv("MY_ARGUMENT")
 sample_name<-my_argument
@@ -222,4 +221,3 @@ output_file <- paste("2TS_", sample_name, "_edited_simple_dedup_rev_upper.fa", s
 command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
 # Execute the shell command
 system(command)
-
