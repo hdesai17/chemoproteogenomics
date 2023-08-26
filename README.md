@@ -60,6 +60,8 @@ flowchart LR;
 
 `./GenerateDB.sh [sample name]` or `sh GenerateDB.sh [sample name]`
 
+The arguments are sample name (no spaces) followed by TRUE or FALSE if generating all combination of variants.
+
 #### Outputs
 
 In the Custom_Databases folder, there are variations of FASTA databases:
@@ -89,7 +91,7 @@ The internal TxID is used in _makeDB.R_ to match missense mutations to proteins
 
 #### Running
 
-`./Combo-GenerateDB.sh [sample name]` or `sh Combo-GenerateDB.sh [sample name]`
+`./GenerateDB.sh [sample name] TRUE` or `sh Combo-GenerateDB.sh [sample name] TRUE`
 
 ## MSFragger command-line 2-stage search
 >[!NOTE]
