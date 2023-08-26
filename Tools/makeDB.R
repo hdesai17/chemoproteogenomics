@@ -69,8 +69,8 @@ print("Done")
 print("Loop through VCFs and get predicted coding changes")
 
 fnames<-list.files(pattern=".vcf*",full.names = T)##change name _filtered or _Aligned
-fnames2<-gsub("_Aligned\\..*","",fnames)
-fnames2<-gsub("./","",fnames2)
+fnames2<-sample_name
+
 list<-list()
 
 for (i in 1:length(fnames)){
