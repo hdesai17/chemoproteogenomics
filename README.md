@@ -14,7 +14,7 @@ Instructions on running are located in bioXiv manuscript: [Multi-omic stratifica
 
 ## Custom Database Generation
 
-Generate sample-matched peptide variant-containing databases from VCFs. Outputs full proteon sequence and trpytic peptide databases with  Uniprot ID FASTA headers or minimal headers that can be used in searching mass-spectromtery based proteomics data
+Generate sample-matched peptide variant-containing databases from VCFs. Outputs full protein sequence and trpytic peptide databases with detailed FASTA headers or minimal headers that can be used in searching mass-spectromtery based proteomics data
 
 VCF processing:
 
