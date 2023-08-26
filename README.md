@@ -73,7 +73,7 @@ Example header with annotations:
 
 sp|Uniprot-ID|Ensembl Gene ID|Gene Name|Ensembl Transcript ID|Internal-TxID_Sample_Rare/Common-NGS-Source|AA Mutation|
 
-The internal TxID is used in makeDB.R to match missense mutations to proteins
+The internal TxID is used in _makeDB.R_ to match missense mutations to proteins
 
 
 >[!NOTE]
