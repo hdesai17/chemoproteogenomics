@@ -1,9 +1,16 @@
 
+
 # Access the environment variable
 my_argument <- Sys.getenv("MY_ARGUMENT")
 sample_name<-my_argument
+
+my_argument2 <- Sys.getenv("MY_ARGUMENT2")
+combos <-my_argument2
+
 # Now you can use 'my_argument' in your R script
 cat("Sample Name:", sample_name, "\n")
+# Now you can use 'my_argument' in your R script
+cat("Combos:", combos, "\n")
 
 #Load Packages
 library(VariantAnnotation)
@@ -113,8 +120,10 @@ setwd(directory)
 source("Tools/replaceAA.R")
 print("Done with loop")
 
+if (combos){source("Tools/custom_loop_parallelized.R") 
+    } else { all_custom_peps<-temppep_2
+          }
 
-all_custom_peps<-temppep_2
 print("Formatting headers")
 names(all_custom_peps)<- paste("sp","|",fasta_headers[match(df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3],fasta_headers[,2]),3], "|",fasta_headers[match(df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3],fasta_headers[,2]),7],"|", df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3], "|", names(all_custom_peps), "|", sep = "")
 print("Done formatting headers")
@@ -185,6 +194,7 @@ names(fasta)<-sub("sp\\|","", names(fasta))
 names(fasta)<-sub("-.*","", names(fasta))
 names(fasta)<-sub("\\|.*","", names(fasta))
 fasta<-fasta[!duplicated(fasta)] #remove same tryptic peptides derived from different transcripts
+if(combos){fasta<-fasta[-grep("too many",fasta)]}
 rev_fasta<-Biostrings::reverse(fasta)
 names(rev_fasta)<-paste0("rev_",names(rev_fasta))
 final_fasta<-c(fasta,rev_fasta)
@@ -213,10 +223,3 @@ command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep =
 # Execute the shell command
 system(command)
 
-setwd(db_directory)
-# Construct the shell command
-input_file <- paste(sample_name, "_custom.fa", sep = "")
-output_file <- paste(sample_name, "_custom_upper.fa", sep = "")
-command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
-# Execute the shell command
-system(command)
