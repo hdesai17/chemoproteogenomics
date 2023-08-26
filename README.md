@@ -91,7 +91,7 @@ The internal TxID is used in _makeDB.R_ to match missense mutations to proteins
 
 #### Running
 
-`./GenerateDB.sh [sample name] TRUE` or `sh Combo-GenerateDB.sh [sample name] TRUE`
+`./GenerateDB.sh [sample name] TRUE` or `sh GenerateDB.sh [sample name] TRUE`
 
 ## MSFragger command-line 2-stage search
 >[!NOTE]
