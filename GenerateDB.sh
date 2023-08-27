@@ -5,10 +5,14 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-# Access the first argument using $1
+# Access the first argument using $1 and second argument using $2
 your_argument="$1"
-# Access the second argument using $2
-your_argument2="$2"
+
+if [ -z "$2" ]; then
+    your_argument2="FALSE"  # Set your default value here
+else
+    your_argument2="$2"
+fi
 
 echo "Sample Name: $your_argument"
 echo "Combos: $your_argument2"
