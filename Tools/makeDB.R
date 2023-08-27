@@ -193,7 +193,11 @@ names(fasta)<-sub("sp\\|","", names(fasta))
 names(fasta)<-sub("-.*","", names(fasta))
 names(fasta)<-sub("\\|.*","", names(fasta))
 fasta<-fasta[!duplicated(fasta)] #remove same tryptic peptides derived from different transcripts
-if(combos & length(grep("too many", fasta)) != 0){fasta<-fasta[-grep("too many",fasta)]}
+if(combos){  
+    if(length(grep("too many", fasta)) != 0){
+      print("Combos and toomany")
+      fasta<-fasta[-grep("too many",fasta)]}
+    }
 rev_fasta<-Biostrings::reverse(fasta)
 names(rev_fasta)<-paste0("rev_",names(rev_fasta))
 final_fasta<-c(fasta,rev_fasta)
