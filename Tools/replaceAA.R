@@ -11,6 +11,8 @@ library(pbapply)
 all_missense<-all_missense[-grep("\\*",all_missense$VARAA)]
 all_missense<-all_missense[-grep("\\*",all_missense$REFAA)]
 
+if (combos){all_missense<-all_missense[nchar(all_missense$REFAA) == 1 & nchar(all_missense$VARAA) == 1]}
+
 
 temppep=pep[which(names(pep)=="23")]
 
