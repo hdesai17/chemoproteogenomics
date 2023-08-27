@@ -61,9 +61,9 @@ flowchart LR;
 
 The arguments are sample name (no spaces) followed by TRUE or FALSE if generating all combination of variants. \
 >[!WARNING]
->Combinations of variants require R packages for parallel computing to minimize time:
->_doParallel_, _foreach_, _doSNOW_
->Uses all cores - 2
+>Combinations of variants require R packages for parallel computing to minimize time: \
+>_doParallel_, _foreach_, _doSNOW_ \
+>Uses all cores - 2 \
 >Recommended use wihtout combos
 
 #### Outputs
