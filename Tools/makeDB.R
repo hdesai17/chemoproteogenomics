@@ -119,7 +119,7 @@ setwd(directory)
 source("Tools/replaceAA.R")
 print("Done with loop")
 
-if (combos){source("Tools/custom_loop_parallelized.R") 
+if (combos){source("Tools/combo_loop_parallel.R") 
     } else { all_custom_peps<-temppep_2
           }
 
