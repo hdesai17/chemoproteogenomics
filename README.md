@@ -60,7 +60,11 @@ flowchart LR;
 `./GenerateDB.sh [sample name] [TRUE/FALSE]` or `sh GenerateDB.sh [sample name] [TRUE/FALSE]`
 
 The arguments are sample name (no spaces) followed by TRUE or FALSE if generating all combination of variants. \
-FALSE is default and recommended
+>[!WARNING]
+>Combinations of variants require R packages for parallel computing to minimize time:
+>_doParallel_, _foreach_, _doSNOW_
+>Uses all cores - 2
+>Recommended use wihtout combos
 
 #### Outputs
 
@@ -84,11 +88,6 @@ The internal TxID is used in _makeDB.R_ to match missense mutations to proteins
 >[!WARNING]
 >For minimal (simple) FASTA headers, additional post-processing is required to obtain variant IDs after FragPipe searches.
 
-## Custom Database Generation with combinations of variants
-
->[!WARNING]
->Running requirements are the same as previous section (when arg 2 is TRUE), with additional R packages for parallel computing:
->_doParallel_, _foreach_, _doSNOW_
 
 #### Running
 
