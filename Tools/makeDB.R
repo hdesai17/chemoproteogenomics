@@ -62,7 +62,6 @@ pep<-prot[which(names(prot)%in%ccds$nucleotide_ID),] ##the peps that correspond 
 pep_txids<-biomaRt::select(txdb, names(pep), columns= c("TXID","GENEID"),"TXNAME")
 names(pep)<-pep_txids[,3]
 subseq(pep, start =width(pep)+1)<-"*"   ###puts an asterisk at the end of every AA sequence
-
 rm(txdb)
 print("Done")
 
@@ -125,7 +124,7 @@ if (combos){source("Tools/combo_loop_parallel.R")
 
 print("Formatting headers")
 names(all_custom_peps)<- paste("sp","|",fasta_headers[match(df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3],fasta_headers[,2]),3], "|",fasta_headers[match(df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3],fasta_headers[,2]),7],"|", df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3], "|", names(all_custom_peps), "|", sep = "")
-print("Done formatting headers")
+print("Done")
 
 
 library(pbapply)
@@ -146,9 +145,7 @@ test<-pbsapply(test, function(w) paste(w,names(w),sep = ""))
 test=pbsapply(test, function(z) paste(z, collapse = ""))
 test=unlist(test)
 names=unname(test)
-print("Done putting locations")
 
-print("Put variant locations in headers 2")
 names(all_custom_peps)<-paste(paste(names(all_custom_peps),test,sep = ""),"|", sep = "")
 list<-str_split_fixed(names(all_custom_peps),"\\|",7)
 list2<-str_split_fixed(list[,6],",",7) 
@@ -164,13 +161,14 @@ names<-apply(list,1,function(x) paste(x,collapse = "|"))
 
 names(all_custom_peps)<-names
 subseq(all_custom_peps, start =width(all_custom_peps))<-""   ##takes the asterisk out
-print("Done putting locations")
+print("Done")
 
 print("Add in Uniprot ID")
 names(all_custom_peps)<-paste(str_split_fixed(names(all_custom_peps),"\\|",2)[,1],ccds[match(str_split_fixed(names(all_custom_peps),"\\|",7)[,4], ccds$nucleotide_ID),10],str_split_fixed(names(all_custom_peps),"\\|",2)[,2],sep = "|")
 all_custom_peps<-all_custom_peps[!duplicated(names(all_custom_peps)),]
 names(all_custom_peps)<-gsub(" ","-",names(all_custom_peps))
-
+print("Done")
+             
 print("Write XStringSet")
 setwd(directory)
 system("mkdir Custom_Databases")
@@ -178,6 +176,7 @@ Biostrings::writeXStringSet(all_custom_peps, filepath = paste("Custom_Databases/
 print("Done")
 setwd(db_directory)
 
+print("Generate tryptic peptide databases")
 python_script <- "../Tools/Automated_DB_Processor.py"
 command <- paste("python3", python_script, "--sample-name", sample_name)
 # Execute the shell command to run the Python script
@@ -225,3 +224,5 @@ output_file <- paste("2TS_", sample_name, "_edited_simple_dedup_rev_upper.fa", s
 command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
 # Execute the shell command
 system(command)
+print("Done")
+print("Finished database generation, outputs are in Custom_Databases folder")
