@@ -87,7 +87,7 @@ The internal TxID is used in _makeDB.R_ to match missense mutations to proteins
 ## Custom Database Generation with combinations of variants
 
 >[!WARNING]
->Running requirements are the same as previous section, with additional R packages for parallel computing:
+>Running requirements are the same as previous section (when arg 2 is TRUE), with additional R packages for parallel computing:
 >_doParallel_, _foreach_, _doSNOW_
 
 #### Running
