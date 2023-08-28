@@ -7,18 +7,13 @@ my_argument2 <- Sys.getenv("MY_ARGUMENT2")
 combos <-my_argument2
 
 # Now you can use 'my_argument' in your R script
-cat("Sample Name:", sample_name, "\n")
+#cat("Sample Name:", sample_name, "\n")
 # Now you can use 'my_argument' in your R script
-cat("Combos:", combos, "\n")
+#cat("Combos:", combos, "\n")
 
-#Load Packages
-library(VariantAnnotation)
-library(GenomicFeatures)
-library(BSgenome.Hsapiens.UCSC.hg38)
-library(stringr)
-library(svMisc)
-library(pbapply)
-library(Biostrings)
+print("Loading Required Packages (warnings off)")
+my_packages<-c("VariantAnnotation","GenomicFeatures","BSgenome.Hsapiens.UCSC.hg38","stringr","svMisc","pbapply","Biostrings")
+lapply(my_packages, function(x) suppressMessages(require(x, character.only = TRUE,quietly=TRUE,warn.conflicts = FALSE)))
 
 #Load objects and inputs
 load("Annotations/seqinfo1.RData")
