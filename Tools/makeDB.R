@@ -110,7 +110,7 @@ ensembl_txids<-fasta_headers[,2][match(changelist$GENEID, fasta_headers[,3])] ##
 changelist<-cbind(changelist,ensembl_txids)
 print("Done")
 
-print("Replace Reference AA and combine exome and RNA variant proteins")
+print("Replace Reference AA with variant AA")
 setwd(directory)
 source("Tools/replaceAA.R")
 print("Done with loop")
