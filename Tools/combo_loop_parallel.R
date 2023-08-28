@@ -1,9 +1,5 @@
-library(stringr)
 library(foreach)
 library(doParallel)
-library(VariantAnnotation)
-library(GenomicFeatures)
-library(svMisc)
 library(doSNOW)
 
 #setup parallel backend to use many processors #pkill -fe RSOCKnode.R to kill
