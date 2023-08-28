@@ -5,8 +5,9 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-# Access the first argument using $1 and second argument using $2
+# Access the first argument using $1
 your_argument="$1"
+your_argument2="$2"
 
 if [ -z "$2" ]; then
     your_argument2="FALSE"  # Set your default value here
@@ -17,7 +18,7 @@ fi
 echo "Sample Name: $your_argument"
 echo "Combos: $your_argument2"
 
-export MY_ARGUMENT="$1"
-export MY_ARGUMENT2="$2"
+export MY_ARGUMENT="$your_argument"
+export MY_ARGUMENT2="$your_argument2"
 
 Rscript Tools/makeDB.R 
