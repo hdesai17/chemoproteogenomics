@@ -1,13 +1,5 @@
 ##Edited to include multi-variant SAAVs (REFAA and VARAA must be same length)
 
-library(stringr)
-library(VariantAnnotation)
-library(GenomicFeatures)
-library(BSgenome.Hsapiens.UCSC.hg38)
-library(stringr)
-library(svMisc)
-library(pbapply)
-
 all_missense<-all_missense[-grep("\\*",all_missense$VARAA)]
 all_missense<-all_missense[-grep("\\*",all_missense$REFAA)]
 
