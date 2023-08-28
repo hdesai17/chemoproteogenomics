@@ -13,9 +13,9 @@ combos <-my_argument2
 
 print("Loading Required Packages (warnings off)")
 my_packages<-c("VariantAnnotation","GenomicFeatures","BSgenome.Hsapiens.UCSC.hg38","stringr","svMisc","pbapply","Biostrings")
-lapply(my_packages, function(x) {
+invisible(lapply(my_packages, function(x) {
   suppressPackageStartupMessages(library(x, character.only = TRUE, quietly = TRUE))
-})
+}))
 
 #Load objects and inputs
 load("Annotations/seqinfo1.RData")
