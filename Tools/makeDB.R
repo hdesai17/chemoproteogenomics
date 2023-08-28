@@ -223,9 +223,12 @@ command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep =
 system(command)
 
 setwd(db_directory)
+fasta<-readAAStringSet(file=paste(sample_name,"_custom.fa",sep = "")) 
+fasta<-fasta[!duplicated(fasta)] 
+Biostrings::writeXStringSet(fasta, filepath = paste(sample_name,"_custom_dedup.fa",sep = ""))
 # Construct the shell command
-input_file <- paste(sample_name, "_custom.fa", sep = "")
-output_file <- paste(sample_name, "_custom_upper.fa", sep = "")
+input_file <- paste(sample_name, "_custom_dedup.fa", sep = "")
+output_file <- paste(sample_name, "_custom_dedup_upper.fa", sep = "")
 command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep = "")
 # Execute the shell command
 system(command)
