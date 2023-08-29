@@ -91,7 +91,7 @@ for (i in 1:length(fnames)){
   list <- c(list, assign(paste("all_missense", fnames2[i], sep = "_"), all_missense))
 }
 print("Done")
-save(all_missense, file="/hdd/heta/all_missense.RData")
+
 #RNA<-do.call(c,RNA_missense_all)#Exome<-do.call(c,Exome_missense_all)#all_missense<-c(RNA,Exome)
 
 print("Get a dataframe of predicted coding changes with gene names and transcript IDs")
@@ -110,7 +110,7 @@ ensembl_txids<-fasta_headers[,2][match(changelist$GENEID, fasta_headers[,3])] ##
 changelist<-cbind(changelist,ensembl_txids)
 print("Done")
 
-print("Replace Reference AA with variant AA")
+print("Replace Reference AA with variant AA, iterate though sequences and replace AA if reference matches to VariantAnnotation reference")
 setwd(directory)
 source("Tools/replaceAA.R")
 print("Done with loop")
