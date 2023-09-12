@@ -1,6 +1,6 @@
 # Chemoproteogenomics 
 This repository provides code for generating missense-variant containing proteomic search databases (FASTA).  \
-Command line MSFragger 2-stage searches are also provided; however, the GUI is highly recommended.
+Command line MSFragger 2-stage searches are also provided (GUI is highly recommended).
 ### Table of Contents: 
 
 - [Generating sample-specifc variant containing FASTA databases](https://github.com/hdesai17/chemoproteogenomics#custom-database-generation)
