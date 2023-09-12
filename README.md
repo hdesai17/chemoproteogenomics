@@ -57,6 +57,7 @@ flowchart LR;
 >Several requirements necessary to run
 >- R packages _VariantAnnotation, BSgenome.Hsapiens.UCSC.hg38, svMisc, pbapply_ and any other dependencies
 >- Python v3.0+
+>- Standard system RAM and hardware
 
 #### Running
 
