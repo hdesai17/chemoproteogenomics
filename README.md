@@ -1,12 +1,13 @@
 # Chemoproteogenomics 
+This repository provides code for generating missense-variant containing proteomic search databases (FASTA). There is also code for command line MSFragger 2-stage searches ;however, the GUI is highly recommended.
 ### Table of Contents: 
 
 - [Generating sample-specifc variant containing FASTA databases](https://github.com/hdesai17/chemoproteogenomics#custom-database-generation)
-   - +/- all combinations of variants
+   - including all combinations of variants
 - [MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search)
 
 The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. \
-Instructions on running are located in bioXiv manuscript: [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information (provides detailed descriptions of database generation and searching in methods)
+Instructions on running 2-stage searches with the GUI are located in bioXiv manuscript: [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information.
 
 >[!IMPORTANT]
 >:exclamation:
