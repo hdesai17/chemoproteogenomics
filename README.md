@@ -44,7 +44,7 @@ flowchart LR;
    A sample VCF file is [here](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing)
 
 >[!IMPORTANT]
->The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf
+>The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf \
 >Prior alignment to hg38
 
 `mv *.vcf chemoproteogenomics`
