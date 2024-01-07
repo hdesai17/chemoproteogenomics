@@ -20,7 +20,7 @@ Generate sample-matched peptide variant-containing databases from VCFs with opti
 
 VCF processing:
 
-![Model]()
+![Model](detailed.png)
 
 #### Before Running
  1. Download or clone the repo
