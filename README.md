@@ -20,20 +20,6 @@ Generate sample-matched peptide variant-containing databases from VCFs with opti
 
 VCF processing:
 
-```mermaid
-flowchart LR;
-   subgraph Make-TxDB
-      direction TB
-      .vcf+.gtf-->|<i>GenomicFeatures<i>|TxDB
-   end
-   
-   subgraph Make-DB
-      direction TB
-      Predicted-SAAVs---protein.fasta
-   end
-   Make-TxDB-->|<i>VariantAnnotation<i>|Make-DB
-   Make-DB-->Missense-Database;
-```
 ![Model](detailed.png)
 
 #### Before Running
