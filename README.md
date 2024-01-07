@@ -34,6 +34,7 @@ flowchart LR;
    Make-TxDB-->|<i>VariantAnnotation<i>|Make-DB
    Make-DB-->Missense-Database;
 ```
+![Model](detailed.png)
 
 #### Before Running
  1. Download or clone the repo
