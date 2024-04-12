@@ -7,8 +7,11 @@ Command line MSFragger 2-stage searches are also provided (GUI is highly recomme
    - option for including all combinations of variants
 - [MSFragger command line pipelines for 2-stage searches](https://github.com/hdesai17/chemoproteogenomics#msfragger-command-line-2-stage-search)
 
-The [FragPipe GUI](https://github.com/Nesvilab/FragPipe) is now compatible with 2-stage searches. \
-Instructions on running 2-stage searches with the GUI are located in bioXiv manuscript: [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information.
+Instructions on running 2-stage searches with the GUI are located here https://fragpipe.nesvilab.org/docs/tutorial_two_pass_search.html \
+and in bioXiv manuscript: [Multi-omic stratification of the missense variant cysteinome](https://doi.org/10.1101/2023.08.12.553095) in supplementary information. 
+
+![Model](scheme_2.png)
+
 
 >[!IMPORTANT]
 >:exclamation:
