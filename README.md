@@ -28,7 +28,9 @@ VCF processing:
 #### Before Running
  1. Download or clone the repo
 
-`git clone https://github.com/hdesai17/chemoproteogenomics.git`
+```
+git clone https://github.com/hdesai17/chemoproteogenomics.git
+```
    
  2. Move VCF file into the root directory (_../chemoproteogenomics_) or make sure the working directory contains VCF, Annotations/Tools folders and GenerateBD.sh script \
    A sample VCF file is [here](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing)
@@ -37,12 +39,17 @@ VCF processing:
 >The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf \
 >Prior alignment to hg38
 
-`mv *.vcf chemoproteogenomics`
+```
+mv *.vcf chemoproteogenomics
+```
     
  3. Download Genocode v28 protein coding translations and GTF annotation files as well as RData file of common missense SNPs [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move all three into Annotations directory 
     
-`mv *gencode /path/to/working/directory/Annotations/` \
-`mv *common /path/to/working/directory/Annotations/`
+```
+mv *gencode /path/to/working/directory/Annotations/
+mv *common /path/to/working/directory/Annotations/
+```
+
 
 >[!IMPORTANT]
 >Several requirements necessary to run
@@ -52,7 +59,9 @@ VCF processing:
 
 #### Running
 
-`./GenerateDB.sh [sample name] [TRUE/FALSE]` or `sh GenerateDB.sh [sample name] [TRUE/FALSE]`
+```
+./GenerateDB.sh [sample name] [TRUE/FALSE]` or `sh GenerateDB.sh [sample name] [TRUE/FALSE]
+```
 
 The arguments are sample name (no spaces) followed by TRUE or FALSE if generating all combination of variants (Default = FALSE)
 
