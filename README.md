@@ -60,7 +60,11 @@ mv *common /path/to/working/directory/Annotations/
 #### Running
 
 ```
-./GenerateDB.sh [sample name] [TRUE/FALSE]` or `sh GenerateDB.sh [sample name] [TRUE/FALSE]
+./GenerateDB.sh [sample name] [TRUE/FALSE]
+```
+or
+```
+sh GenerateDB.sh [sample name] [TRUE/FALSE]
 ```
 
 The arguments are sample name (no spaces) followed by TRUE or FALSE if generating all combination of variants (Default = FALSE)
