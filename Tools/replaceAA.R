@@ -6,7 +6,7 @@ all_missense<-all_missense[-grep("\\*",all_missense$REFAA)]
 if (combos){all_missense<-all_missense[nchar(all_missense$REFAA) == 1 & nchar(all_missense$VARAA) == 1]}
 
 
-temppep=pep[which(names(pep)=="23")]
+temppep=BStringSet(pep[which(names(pep)=="23")])
 
 for (i in 1:length(all_missense)){
   print("Iteration")
@@ -29,7 +29,8 @@ for (i in 1:length(all_missense)){
     
     if (ref == ref2 & nchar(ref) ==nchar(alt)){
       pos=c(mapply(function(x, y) which(x != y), strsplit(ref, ""), strsplit(alt, ""))) 
-      temp[[1]][seq][pos]<-as(tolower(as.character(alt1[pos])),"AAString")
+      temp<-BStringSet(temp)
+      temp[[1]][seq][pos] <- BString(tolower(as.character(alt1[pos])))
       names(temp)<-paste(names(temp),all_missense$paramRangeID[i],paste(ref2,paste0(proloc,collapse = ":"),alt,sep=""), sep = " ")
       temppep<-c(temppep,temp)
     }else{
