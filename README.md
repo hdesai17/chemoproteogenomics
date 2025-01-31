@@ -33,7 +33,7 @@ git clone https://github.com/hdesai17/chemoproteogenomics.git
 ```
    
  2. Move VCF file into the root directory (_../chemoproteogenomics_) or make sure the working directory contains VCF, Annotations/Tools folders and GenerateBD.sh script \
-   A sample VCF file is [here](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing)
+   A sample VCF file is [here](https://drive.google.com/drive/folders/0B3bUQnhSJGnxfmltTm5URlNhMUVZX2xfdEhwVHpjcFB3eVF1Y0tVSFVRSkdPTFB0N2w5YVk?resourcekey=0-Tz7BhL5bFDBs9w0jUB2kVQ&usp=sharing)
 
 >[!IMPORTANT]
 >The VCF has should have file name format SAMPLE_NAME_RNA.vcf or SAMPLE_NAME_Exome.vcf \
@@ -43,7 +43,7 @@ git clone https://github.com/hdesai17/chemoproteogenomics.git
 mv *.vcf chemoproteogenomics
 ```
     
- 3. Download Genocode v28 protein coding translations and GTF annotation files as well as RData file of common missense SNPs [from this link](https://drive.google.com/drive/folders/1w1EaQC7q5uVudEMCGo-zREVJhK-YOC13?usp=sharing) and move all three into Annotations directory 
+ 3. Download Genocode v28 protein coding translations and GTF annotation files as well as RData file of common missense SNPs [from this link](https://drive.google.com/drive/folders/0B3bUQnhSJGnxfmltTm5URlNhMUVZX2xfdEhwVHpjcFB3eVF1Y0tVSFVRSkdPTFB0N2w5YVk?resourcekey=0-Tz7BhL5bFDBs9w0jUB2kVQ&usp=sharing) and move all three into Annotations directory 
     
 ```
 mv *gencode /path/to/working/directory/Annotations/
