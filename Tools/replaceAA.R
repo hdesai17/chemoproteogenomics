@@ -1,5 +1,6 @@
 ##Edited to include multi-variant SAAVs (REFAA and VARAA must be same length)
-
+directory<-getwd()  
+load("Temp/all_missense.RData")
 all_missense<-all_missense[-grep("\\*",all_missense$VARAA)]
 all_missense<-all_missense[-grep("\\*",all_missense$REFAA)]
 
@@ -63,9 +64,9 @@ all_same_txids <- c(temppep_2[duplicated(str_split_fixed(names(temppep_2),"[_]+"
 
 
 print("Finished")
-#save(temppep, file="temppep.RData")
+save(temppep, file="Temp/temppep.RData")
 system("mkdir Temp")
 save(temppep_2, file="Temp/temppep_2.RData")
-#save(rna_exome, file="rna_exome.RData")
+save(rna_exome, file="Temp/rna_exome.RData")
 save(all_same_txids, file="Temp/all_same_txids.RData")
 print("Saved")

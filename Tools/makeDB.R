@@ -1,4 +1,4 @@
-
+rm(list = ls())
 # Access the environment variable
 my_argument <- Sys.getenv("MY_ARGUMENT")
 sample_name<-my_argument
@@ -66,10 +66,11 @@ print("Loop through VCFs and get predicted coding changes")
 
 fnames<-list.files(pattern=".vcf*",full.names = T)##change name _filtered or _Aligned
 fnames2<-sample_name
-
+fnames<-fnames[grep(paste(fnames2, collapse="|"), fnames)]
 list<-list()
 
 for (i in 1:length(fnames)){
+  print(fnames)
   library(VariantAnnotation)
   fl <- fnames[i]
   vcf <- VariantAnnotation::readVcf(fl, "hg38")
@@ -112,13 +113,16 @@ print("Done")
 
 print("Replace Reference AA with variant AA, iterate though sequences and replace AA if reference matches to VariantAnnotation reference")
 setwd(directory)
+system("mkdir Temp")
+save(all_missense, file="Temp/all_missense.RData")
 source("Tools/replaceAA.R")
 print("Done with loop")
+load("Temp/temppep_2.RData")
 
 if (combos){source("Tools/combo_loop_parallel.R") 
     } else { all_custom_peps<-temppep_2
           }
-
+all_custom_peps<-temppep_2
 print("Formatting headers")
 names(all_custom_peps)<- paste("sp","|",fasta_headers[match(df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3],fasta_headers[,2]),3], "|",fasta_headers[match(df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3],fasta_headers[,2]),7],"|", df[match(str_split_fixed(names(all_custom_peps)," ",3)[,1],df$TXID),3], "|", names(all_custom_peps), "|", sep = "")
 print("Done")
@@ -234,3 +238,4 @@ command <- paste("dd if=", input_file, " of=", output_file, " conv=ucase", sep =
 system(command)
 print("Done")
 print("Finished database generation, outputs are in Custom_Databases folder")
+rm(list = ls())
